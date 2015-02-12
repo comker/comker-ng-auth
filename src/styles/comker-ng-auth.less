@@ -1,0 +1,353 @@
+/* header */
+header.slideout {
+    position: fixed;
+    top: 0;
+    left: 0;
+    margin-left: -350px;
+    width: 350px;
+    background-color: #f8f8f8;
+    color: #333;
+    min-width: 35px;
+    height: 100%;
+    overflow: scroll;
+    border-right: 1px solid #f0f0f0;
+    -webkit-transition: .2s all ease;
+    -moz-transition: .2s all ease;
+    -o-transition: .2s all ease;    
+    -ms-transition: .2s all ease;
+    transition: .2s all ease;
+    z-index: 1000;
+}
+
+    #header-overlay{
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0,0,0,.25);
+        z-index: 999;
+        display: none;  
+    }
+    
+    header.slideout .profile{
+        position: absolute;
+        top: 5px;
+        left: 5px;
+        height: 45px;
+        line-height: 45px;
+        z-index: 10;
+    }
+    
+        header.slideout .profile .photo{
+            float: left;
+            display: inline-block;
+            width: 45px;
+            height: 45px;
+            background-size: cover;
+            border-radius: 50%;
+            margin-right: 5px;
+            border: 2px solid #f0f0f0;
+        }
+    
+        header .profile a{
+            color: #111;
+            text-transform: uppercase;
+        }
+
+    
+    header.slideout .sub-menu a{
+        display: inline-block;
+        width: 40px;
+        height: 40px;
+        line-height: 40px;
+        text-align: center;
+        color: #aaa;
+        font-size: 1em;
+        margin-left: 0;
+        border-radius: 50%;
+    }
+    
+         header.slideout .sub-menu a:hover{
+             text-decoration: none;
+             color: #1111;
+         }
+         
+         header.slideout .sub-menu a.signout:hover{
+             background-color: #A4110A;
+             color: #fff;
+         }
+         
+         header.slideout .sub-menu a.republish:hover{
+             background-color: #7ec57e;
+         }
+         
+    header.slideout .sub-menu{
+        position: absolute;
+        top: 7px;
+        right: 5px;
+        z-index: 10;
+    }
+    
+    header.slideout .sub-menu a.hide-menu{
+        background-color: #ddd;
+        color: #fff;
+        border-color: #555;
+    }
+    
+        header.slideout .sub-menu a.hide-menu:hover{
+            background-color: #aaa;
+        }
+
+    body.show-nav header{
+        margin-left: 0;
+        box-shadow: 30px 30px 100px rgba(0,0,0,.2);
+    }
+    
+    body.show-nav #header-overlay {
+        display: block;
+    }
+    
+    header.slideout ul, header.slideout li{
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        border-bottom: 1px solid #f0f0f0;
+    }
+    
+    header.slideout h2{
+        position: relative;
+        color: #aaa;
+        font-size: 13px;
+        font-weight: normal;
+        padding: 0 0 0 10px;
+        margin: 0;
+        text-transform: uppercase;
+    }
+    
+        header.slideout h2 a{
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
+            display: inline-block;
+            color: #aaa;
+            font-size: 11px;
+            font-weight: normal;
+            text-transform: uppercase;
+        }
+        
+        header.slideout h2 a i{
+            color: #888;
+            font-size: 11px;
+            margin-left: 5px;
+        }
+    
+        header.slideout h2.basic{
+            padding: 75px 0 10px 10px;
+        }
+        
+        header.slideout h2.advanced{
+            padding: 20px 0 10px 10px;
+        }
+    
+    header.slideout ul{
+        border-top: 1px solid #ccc;
+    }
+    
+    header.slideout li a{
+        font-family: "Roboto", sans-serif;
+        font-weight: 300;
+        font-size: 16px;
+        display: block;
+        padding: 10px 15px;
+        color: #111;
+        font-size: 1.1em;
+    }
+    
+        header.slideout li a i{
+            display: inline-block !important;
+            color: #aaa;
+            margin-right: 10px;
+            width: 20px !important;
+        }
+    
+        header.slideout li.active a{
+            background-color: #3299BB;
+            color: #fff;
+        }
+        
+            header li.active i{
+                color: #fff;
+            }
+    
+        header.slideout li a:hover{
+            list-style: none;
+            color: #fff;
+            text-decoration: none;
+            background-color: #3299bb;
+        }
+        
+            header.slideout li a:hover i{
+                color: #fff;
+            }
+
+
+@table-border-color: #999;
+@cell-border-color: #eee;
+
+.nutrix-ui-auth {
+    div.login-form {
+        width: 500px;
+        min-height: 300px;
+        border: 1px red solid;
+    }
+}
+
+.ng-table {
+    th {
+        text-align: center;
+        -webkit-touch-callout: none;
+        -webkit-user-select: none;
+        -khtml-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+
+        &.sortable {
+            cursor: pointer;
+
+            div {
+                padding-right: 18px;
+                position: relative;
+
+                &:after, &:before {
+                    content: "";
+                    border-width: 0 4px 4px;
+                    border-style: solid;
+                    border-color: #000 transparent;
+                    visibility: visible;
+                    right: 8px;
+                    top: 50%;
+                    position: absolute;
+                    opacity: .3;
+                    margin-top: -4px;
+                }
+                &:before {
+                    margin-top: 2px;
+                    border-bottom: none;
+                    border-left: 4px solid transparent;
+                    border-right: 4px solid transparent;
+                    border-top: 4px solid #000;
+                }
+            }
+
+            div:hover:after, div:hover:before {
+                opacity: 1;
+                visibility: visible;
+            }
+            &.sort-desc, &.sort-asc {
+                background-color: rgba(141, 192, 219, 0.25);
+                text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75);
+
+                div:after {
+                    margin-top: -2px;
+                }
+                div:before {
+                    visibility: hidden;
+                }
+            }
+            &.sort-asc div:after, &.sort-asc div:hover:after {
+                visibility: visible;
+                filter: alpha(opacity=60);
+                -khtml-opacity: 0.6;
+                -moz-opacity: 0.6;
+                opacity: 0.6;
+            }
+            &.sort-desc div:after {
+                border-bottom: none;
+                border-left: 4px solid transparent;
+                border-right: 4px solid transparent;
+                border-top: 4px solid #000;
+                visibility: visible;
+                -webkit-box-shadow: none;
+                -moz-box-shadow: none;
+                box-shadow: none;
+                filter: alpha(opacity=60);
+                -khtml-opacity: 0.6;
+                -moz-opacity: 0.6;
+                opacity: 0.6;
+            }
+        }
+        &.filter {
+            .input-filter {
+                margin: 0;
+                display: block;
+                width: 100%;
+                min-height: 30px;
+                -webkit-box-sizing: border-box;
+                -moz-box-sizing: border-box;
+                box-sizing: border-box;
+            }
+        }
+    }
+
+    & + .pagination {
+        margin-top: 0;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    .ng-table-responsive {
+        border-bottom: 1px solid @table-border-color;
+        tr {
+            border-top: 1px solid @table-border-color;
+            border-left: 1px solid @table-border-color;
+            border-right: 1px solid @table-border-color;
+        }
+        td:before {
+            position: absolute;
+            padding: 8px;
+            left: 0;
+            top: 0;
+            width: 50%;
+            white-space: nowrap;
+            text-align: left;
+            font-weight: bold;
+        }
+        thead {
+            tr {
+                th {
+                    text-align: left;
+                }
+                &.ng-table-filters {
+                    th {
+                        padding: 0;
+
+                        form > div {
+                            padding: 8px;
+                        }
+                    }
+                }
+            }
+        }
+        td {
+            border: none;
+            border-bottom: 1px solid @cell-border-color;
+            position: relative;
+            padding-left: 50%;
+            white-space: normal;
+            text-align: left;
+
+            &:before {
+                content: attr(data-title-text);
+            }
+        }
+        &, thead, tbody, th, td, tr {
+            display: block;
+        }
+    }
+
+    .ng-table-pager {}
+    .ng-table-pagination {}
+    .ng-table-counts {}
+}

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]> <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]> <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="viewport" content="width=device-width">
+
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+        <!--[if lt IE 9]>
+        <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+        <![endif]-->
+        <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+        <script src="../bower_components/angular/angular.js"></script>
+        <script src="js/comker-ng-auth-demo.js"></script>
+        <script src="../dist/comker-ng-auth.js"></script>
+        <link rel="stylesheet" href="../dist/comker-ng-auth.css">
+    </head>
+    <body ng-app="comkerNgAuthDemo">
+        <h1>Nutrix UI Authentication</h1>
+
+        <div ng-controller="comkerNgAuthDemo">
+            <comker-ng-auth records="invoice"></comker-ng-auth>
+            
+            <button ng-click='toggleModal()'>Open Modal Dialog</button>
+
+            <comker-ng-auth-dialog show='modalShown' width='640px' height='60%'>
+              <comker-ng-auth-login></comker-ng-auth-login>
+            </comker-ng-auth-dialog>
+            
+        </div>
+    </body>
+</html>
