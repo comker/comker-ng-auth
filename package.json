@@ -1,11 +1,11 @@
 {
-    "name": "ng-table",
-    "version": "0.4.3",
-    "author": "Vitalii Savchuk <esvit666@gmail.com>",
+    "name": "comker-ng-auth",
+    "version": "0.0.1",
+    "author": "Comker Team <comker@drupalex.net>",
     "license": "BSD",
     "repository": {
         "type": "git",
-        "url": "git://github.com/esvit/ng-table.git"
+        "url": "git://github.com/comker/comker-ng-auth.git"
     },
     "devDependencies": {
         "grunt": "~0.4.2",
